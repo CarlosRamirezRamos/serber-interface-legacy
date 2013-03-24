@@ -1,0 +1,21 @@
+@(title: String, menu: String)
+
+@serber("Interface Web", "Visualizar los datos.  Depurar Datos.", title) {
+          <div class="block">
+            <ol class="round">
+              <li class="one">
+                <p>Usando el API implementado de servicios web RESTful y aceptando JSON, se construye una interfaz web que permitirá buscar y visualizar los datos registrados. </p>
+              </li>
+              <li class="two">
+                <p>Adicionalmente se permitirá administrar los vocabularios controlados, control/vigilancia de duplicados y orígenes de datos, y ayudas a la depuración de los datos. </p>
+              </li>
+              <li class="three">
+                <p>Para poder transformar los campos del modelo de la ISO a un modelo más conocido o específico habrá que hacer un esfuerzo importante pues habrá que concretar lo genérico; este trabajo será totalmente reutilizable para la conexión que más adelante <mark>ALZIRA</mark> y <mark>DIANA</mark> tendrán que hacer con SERBER. </p>
+              </li>
+            </ol>
+          </div>
+
+          <script type="text/javascript">
+            var menuVm = "@menu";
+          </script>
+}

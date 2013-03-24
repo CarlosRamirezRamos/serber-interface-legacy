@@ -1,0 +1,70 @@
+@(category: String, description: String, title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@title</title>
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/serber.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/pilot.css")">
+  </head>
+  <body>
+    <header>
+      <div class="content-wrapper">
+        <div class="logo-serber">
+          <a title="Servicio de Registro de Bibliotecas y Entidades Relacionadas" href="/"></a>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="float-left logo-mecd">
+          <a title="Ministerio de Educación, Cultura y Deporte - Gobierno de España" href="/"></a>
+        </div>
+        <div class="float-left">
+          <p class="site-title">
+            <a href="/"><em>piloto</em></a>
+          </p>
+        </div>
+      </div>
+    </header>
+    <div id="body">
+      <section class="titlebar">
+        <div class="content-wrapper">
+          <hgroup class="title">
+            <h1>@category </h1>
+          </hgroup>
+          <p>@description </p>
+        </div>
+      </section>
+      <section class="content-wrapper">
+        <div class="main-leftcolumn">
+          <ul id="menu">
+            <li><a href="/" title="SERBER|piloto">Home</a> </li>
+            <li class="separator">
+              &nbsp;
+            </li>
+            <li data-bind="css: { selected: menu()=='Notes' }">
+              <a href="/notes" title="Notas">Notas piloto</a>
+            </li>
+            <li data-bind="css: { selected: menu()=='Data' }">
+              <a href="/data" title="Datos">Datos piloto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-contentcolumn">
+          @content
+        </div>
+      </section>
+      <footer class="content-wrapper footer">
+        <p>SERBER - Servicio de Registro de Bibliotecas y Entidades Relacionadas</p>
+      </footer>
+    </div>
+    <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/knockout-2.2.1.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/modernizr-2.5.3.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/menu.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/datapane.js")" type="text/javascript"></script>
+  </body>
+</html>
