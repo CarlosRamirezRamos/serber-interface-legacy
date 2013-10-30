@@ -17,46 +17,42 @@ import views.html.*;
 public class Application extends Controller {
 
     public static Result index() {
-        return ok(index.render("Welcome to SERBER|pilot - Home"));
+        return ok(index.render("Welcome to SERBER|pilot - Home", "index"));
     }
 
     public static Result webInterface() {
-        return ok(webinterface.render("SERBER - Web Interface", "WebInterface"));
+        return ok(webinterface.render("SERBER - Web Interface", "serber/WebInterface"));
     }
 
     public static Result webServices() {
-        return ok(webservices.render("SERBER - Web Services", "WebServices"));
+        return ok(webservices.render("SERBER - Web Services", "serber/WebServices"));
     }
 
     public static Result dataModel() {
-        return ok(datamodel.render("SERBER - Data Model", "DataModel"));
+        return ok(datamodel.render("SERBER - Data Model", "serber/DataModel"));
     }
 
     public static Result metadata() {
-        return ok(metadata.render("SERBER - Metadata", "Metadata"));
+        return ok(metadata.render("SERBER - Metadata", "serber/Metadata"));
     }
 
     public static Result linkedData() {
-        return ok(linkeddata.render("SERBER - Linked Data", "LinkedData"));
+        return ok(linkeddata.render("SERBER - Linked Data", "serber/LinkedData"));
     }
 
     public static Result foss() {
-        return ok(foss.render("SERBER - FOSS", "FOSS"));
-    }
-
-    public static Result references() {
-        return ok(references.render("SERBER - References", "References"));
+        return ok(foss.render("SERBER - FOSS", "serber/FOSS"));
     }
 
     public static Result registryData() {
-        return ok(registry.render("pilot - Registry Data", "RegistryData", null));
+        return ok(registry.render("pilot - Registry Data", "pilot/RegistryData", null));
     }
 
     public static Result registryObject(Long key) {
-        return ok(registry.render("pilot - Registry Object", "RegistryObject", key));
+        return ok(registry.render("pilot - Registry Object", "pilot/RegistryObject", key));
     }
 
     public static Result notes() {
-        return ok(notes.render("pilot - Notes", "Notes"));
+        return ok(notes.render("pilot - Notes", "pilot/Notes"));
     }
 }
