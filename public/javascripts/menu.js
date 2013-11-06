@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @fileoverview 'menu' view model for Knockout.
  *
  * @(menu: String)
@@ -14,7 +14,7 @@
  * </script>
  *
  */
-﻿
+
 
 var MenuVm = {
   menu: ko.observable('')

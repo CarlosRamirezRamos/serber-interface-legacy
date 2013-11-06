@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @fileoverview 'data pane' view model for Knockout.
  *
  * @(key: Long)
