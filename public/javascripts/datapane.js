@@ -134,13 +134,13 @@ var DataPaneVm = {
 /*----------------------------------------------------------------------------*/
 
 DataPaneVm.isSearchButtonVisible = ko.computed(
-    function() {
+    function () {
       return DataPaneVm._key() === '';
     },
     DataPaneVm);
 
 DataPaneVm.isBackToSearchButtonVisible = ko.computed(
-    function() {
+    function () {
       return DataPaneVm.response() !== null && DataPaneVm._key() !== '';
     },
     DataPaneVm);
@@ -148,62 +148,62 @@ DataPaneVm.isBackToSearchButtonVisible = ko.computed(
 /*----------------------------------------------------------------------------*/
 
 DataPaneVm.isRegistryObjectVisible = ko.computed(
-    function() {
+    function () {
       return DataPaneVm._key() !== '';
     },
     DataPaneVm);
 
 DataPaneVm.isIdentifiersVisible = ko.computed(
-    function() {
+    function () {
       return DataPaneVm.identifiers() !== null;
     },
     DataPaneVm);
 
 DataPaneVm.isSubjectsVisible = ko.computed(
-    function() {
+    function () {
       return DataPaneVm.subjects() !== null;
     },
     DataPaneVm);
 
 DataPaneVm.isDescriptionsVisible = ko.computed(
-    function() {
+    function () {
       return DataPaneVm.descriptions() !== null;
     },
     DataPaneVm);
 
 DataPaneVm.isComplexNamesVisible = ko.computed(
-    function() {
+    function () {
       return DataPaneVm.complexNames() !== null;
     },
     DataPaneVm);
 
 DataPaneVm.isAccessPoliciesVisible = ko.computed(
-    function() {
+    function () {
       return DataPaneVm.accessPolicies() !== null;
     },
     DataPaneVm);
 
 DataPaneVm.isRelatedInfoVisible = ko.computed(
-    function() {
+    function () {
       return DataPaneVm.relatedInfo() !== null;
     },
     DataPaneVm);
 
 DataPaneVm.isLocationsVisible = ko.computed(
-    function() {
+    function () {
       return DataPaneVm.locations() !== null;
     },
     DataPaneVm);
 
 DataPaneVm.isRelationsVisible = ko.computed(
-    function() {
+    function () {
       return DataPaneVm.relations() !== null;
     },
     DataPaneVm);
 
 /*----------------------------------------------------------------------------*/
 
-DataPaneVm.searchButton = function() {
+DataPaneVm.searchButton = function () {
   if (DataPaneVm.search() !== '') {
     if (DataPaneVm.search() == '*') {
       DataPaneVm.search('');
@@ -215,13 +215,13 @@ DataPaneVm.searchButton = function() {
   }
 };
 
-DataPaneVm.backToSearchButton = function() {
+DataPaneVm.backToSearchButton = function () {
   DataPaneVm._key('');
 };
 
 /*----------------------------------------------------------------------------*/
 
-DataPaneVm._loadRegistryObject = function() {
+DataPaneVm._loadRegistryObject = function () {
   if (DataPaneVm._key() !== '') {
     // Send an AJAX request.
     SettingsVm.url = AUTHORITY + '/registry-object/' + DataPaneVm._key();
@@ -230,12 +230,12 @@ DataPaneVm._loadRegistryObject = function() {
   }
 };
 
-DataPaneVm.showRegistryObject = function(data) {
+DataPaneVm.showRegistryObject = function (data) {
   DataPaneVm._key(data.registry_object_key);
   DataPaneVm._loadRegistryObject();
 };
 
-DataPaneVm.showRelatedRegistryObject = function(data) {
+DataPaneVm.showRelatedRegistryObject = function (data) {
   DataPaneVm._key(data.related_registry_object_key);
   DataPaneVm._loadRegistryObject();
 };
@@ -243,14 +243,14 @@ DataPaneVm.showRelatedRegistryObject = function(data) {
 /*----------------------------------------------------------------------------*/
 
 // Load this view model properties.
-DataPaneVm._load = function() {
+DataPaneVm._load = function () {
   if (typeof keyVm !== 'undefined') {
     DataPaneVm._key(keyVm);
   }
   DataPaneVm._loadRegistryObject();
 };
 
-DataPaneVm._init = function() {
+DataPaneVm._init = function () {
   if (document.getElementById('data-pane')) {
     // Activate Knockout on "data-pane" view model.
     ko.applyBindings(DataPaneVm, document.getElementById('data-pane'));
@@ -259,6 +259,6 @@ DataPaneVm._init = function() {
 };
 
 $(document).ready(
-    function() {
+    function () {
       DataPaneVm._init();
     });

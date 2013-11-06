@@ -21,13 +21,13 @@ var MenuVm = {
 };
 
 // Load this view model properties.
-MenuVm._load = function() {
+MenuVm._load = function () {
   if (typeof menuVm !== 'undefined') {
     MenuVm.menu(menuVm);
   }
 };
 
-MenuVm._init = function() {
+MenuVm._init = function () {
   if (document.getElementById('menu')) {
     // Activate Knockout on "menu" view model.
     ko.applyBindings(MenuVm, document.getElementById('menu'));
@@ -36,6 +36,6 @@ MenuVm._init = function() {
 };
 
 $(document).ready(
-    function() {
+    function () {
       MenuVm._init();
     });
