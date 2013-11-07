@@ -1,27 +1,27 @@
 @(title: String, menu: String)
 
-@serber("Servicios Web", "API de Servicios Web Restful que permita intercambiar información con las aplicaciones origen de los datos y con terceros.", title) {
+@serber("Servicios Web", "API de Servicios Web RESTful que permita el intercambio de información con el origen de datos y con terceros.", title) {
           <div class="block">
             <ol class="round">
               <li class="one">
-                <p>Los servicios RESTful son ligeros y estándares, mediante un mínimo tráfico pemite la obtención de datos vía HTTP.  Los servicios admitirán diferentes formatos o selrializaciones, JSON y XML. </p>
+                <p>Los servicios web admitirán diferentes formatos: JSON y XML. </p>
                 <ul>
-                  <li><mark>JSON:</mark> Especialmente útil para el uso por interfaz Web y su consumo desde clientes Web.  Es muy utilizado incluso para bases de datos no relacionales como MongoDB. </li>
-                  <li><mark>XML:</mark> Especialmente útil para el intercambio entre máquinas o aplicaciones.  En este caso el schema sería el de la ISO. </li>
+                  <li><mark>JSON:</mark> Especialmente útil resulta para el uso por interfaz web y su consumo desde clientes web, es muy utilizado incluso para bases de datos no relacionales como MongoDB.  En este caso se utilizará para intercambiar datos con el modelo de datos. </li>
+                  <li><mark>XML:</mark> Especialmente útil resulta para el intercambio entre máquinas o aplicaciones.  En este caso se utilizará para el esquema de la ISO. </li>
                 </ul>
               </li>
               <li class="two">
-                <p>Un claro uso de los servicios Web en JSON es la propia interfaz Web con la que se va a dotar SERBER que los usa para intercambiar datos con el modelo. </p>
+                <p>Los servicios web RESTful son ligeros y estándares, además permiten la obtención de datos vía HTTP con un tráfico mínimo. </p>
               </li>
               <li class="three">
-                <p>API: </p>
+                <p>API de servicios web RESTful: </p>
                 <ul>
                   <li>(GET)&nbsp;/api/registry-object </li>
                   <li>(POST)&nbsp;/api/registry-object/:id </li>
                   <li>(GET)&nbsp;/api/registry-object/:id </li>
                   <li>(PUT)&nbsp;/api/registry-object </li>
                   <li>(DELETE)&nbsp;/api/registry-object/:id </li>
-                  <li>...</li>
+                  <li>…</li>
                 </ul>
               </li>
             </ol>
