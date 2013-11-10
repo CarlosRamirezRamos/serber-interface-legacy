@@ -1,11 +1,10 @@
 @(category: String, description: String, title: String)(content: Html)
 
 <!DOCTYPE html>
-
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>@title</title>
     <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
     <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/serber.css")">
@@ -23,9 +22,7 @@
           <a title="Ministerio de Educación, Cultura y Deporte - Gobierno de España" href="/"></a>
         </div>
         <div class="float-left">
-          <p class="site-title">
-            <a href="/"><em>piloto</em></a>
-          </p>
+          <p class="site-title"><a href="/">piloto</a>
         </div>
       </div>
     </header>
@@ -33,24 +30,18 @@
       <section class="titlebar">
         <div class="content-wrapper">
           <hgroup class="title">
-            <h1>@category </h1>
+            <h1>@category</h1>
           </hgroup>
-          <p>@description </p>
+          <p>@description
         </div>
       </section>
       <section class="content-wrapper">
         <div class="main-leftcolumn">
           <ul id="menu">
-            <li><a href="/" title="SERBER|piloto">Home</a> </li>
-            <li class="separator">
-              &nbsp;
-            </li>
-            <li data-bind="css: { selected: menu()=='Notes' }">
-              <a href="/notes" title="Notas">Notas piloto</a>
-            </li>
-            <li data-bind="css: { selected: menu()=='Data' }">
-              <a href="/data" title="Datos">Datos piloto</a>
-            </li>
+            <li><a href="/" title="Home SERBER|piloto">Home</a>
+            <li class="separator">&nbsp;
+            <li data-bind="css: { selected: menu()=='Data' }"><a href="/data" title="Datos piloto">Datos</a>
+            <li data-bind="css: { selected: menu()=='Notes' }"><a href="/notes" title="Notas piloto">Notas</a>
           </ul>
         </div>
         <div class="main-contentcolumn">
@@ -58,7 +49,7 @@
         </div>
       </section>
       <footer class="content-wrapper footer">
-        <p>SERBER - Servicio de Registro de Bibliotecas y Entidades Relacionadas</p>
+        <p>SERBER - Servicio de Registro de Bibliotecas y Entidades Relacionadas
       </footer>
     </div>
     <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>

@@ -40,8 +40,8 @@ public class Application extends Controller {
         return ok(linkeddata.render("SERBER - Linked Data", "LinkedData"));
     }
 
-    public static Result openSource() {
-        return ok(opensource.render("SERBER - Open Source", "OpenSource"));
+    public static Result foss() {
+        return ok(foss.render("SERBER - FOSS", "FOSS"));
     }
 
     public static Result references() {
