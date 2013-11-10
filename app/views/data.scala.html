@@ -1,12 +1,12 @@
 @(title: String, menu: String, key: Long)
 
-@pilot("Datos", "Buscar y ver objetos de registro en la base de datos del proyecto piloto.", title) {
+@pilot("Datos", "Búsqueda y consulta de objetos de registro en la base de datos del proyecto piloto.", title) {
           <div id="data-pane">
             <div style="display: none;" data-bind="visible: isSearchButtonVisible">
               <table class="search">
                 <thead>
                   <tr>
-                    <th>Búsqueda
+                    <th>Sistema de Búsqueda
                 <tbody>
                   <tr>
                     <td><label for="naming">Denominación (Name Part):</label><input name="naming" data-bind="value: search">
@@ -21,7 +21,7 @@
             </div>
             <div style="display: none;" data-bind="visible: isBackToSearchButtonVisible">
               <div class="block">
-                <button data-bind="click: backToSearchButton">Volver a la búsqueda</button>
+                <button data-bind="click: backToSearchButton">Volver al Sistema de Búsqueda</button>
               </div>
             </div>
             <div class="entity registryobject" style="display: none;" data-bind="visible: isRegistryObjectVisible">

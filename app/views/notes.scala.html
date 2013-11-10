@@ -1,33 +1,33 @@
 @(title: String, menu: String)
 
-@pilot("Notas", "Aspectos relevantes de proyecto piloto.", title) {
+@pilot("Notas", "Exposición de los aspectos más relevantes del proyecto piloto.", title) {
           <div class="block">
             <ol class="round">
-              <li class="one"><h3>Tareas más relevantes realizadas en el proyecto piloto</h3>
+              <li class="one"><h3>Tareas sobresalientes ya realizadas</h3>
               <ul>
-                <li>Creación del modelo de datos.
-                <li>Creación del API JSON/XML.
-                <li>Prueba del API en modo consulta y lectura.
-                <li>Validación del modelo mediante la comprobación con datos.
+                <li><p>Síntesis de un modelo de datos basado en el esquema de la ISO 2146:2010.</p>
+                <li><p>Construcción de un servicio de registro dotado de un API de servicios web <em>RESTful</em> que permite la consulta (modo lectura) de los datos encapsulados en el modelo de datos, vía web y utilizando el formato JSON.</p>
+                <li><p>Construcción de una aplicación "prueba de concepto" del servicio de registro dotada de una interfaz web <em>responsive</em> que utilice el API de servicios web <em>RESTful</em> para la consulta (modo lectura) de los datos encapsulados en el modelo de datos, vía web y utilizando el formato JSON.</p>
+                <li><p>Validación del modelo de datos mediante la carga de un lote de datos procedentes de ALZIRA/DIANA en la aplicación "prueba de concepto" del servicio de registro.</p>
               </ul>
-              <li class="two"><h3>Aspectos formales del proyecto piloto que quedan pendientes</h3>
+              <li class="two"><h3>Tareas formales pendientes por realizar</h3>
               <ul>
-                <li>Realización de un entregable comentado.
-                <li>Prueba del API en modo escritura.
+                <li><p>Extensión de la aplicación "prueba de concepto" del servicio de registro de manera que se pueda utilizar el API de servicios web <em>RESTful</em> para la modificación (modo escritura) de los datos encapsulados en el modelo de datos, vía web y utilizando JSON.</p>
+                <li><p>Elaboración de un entregable documentado.</p>
               </ul>
               <li class="three"><h3>Conclusiones</h3>
               <ul>
-                <li>El modelo de datos que aporta el esquema de la ISO es perfecto para encapsular datos de diferente naturaleza y origen.
-                <li>Es necesario estudiar el origen de datos, sobre todo las relaciones entre objetos de registro, para establecer una correcta correlación con el esquema de la ISO y, así, sacarle todo el partido (vocabulario unificado, identificadores únicos, abierto en número y tipo de datos, manejo de históricos).
+                <li><p>El modelo de datos basado en el esquema de la ISO 2146:2010 ha demostrado ser perfecto para encapsular datos de diferente origen y naturaleza.</p>
+                <li><p>Se observa la siguiente cadena de implicaciones: Si no se analiza cuidadosamente el origen de datos, esto es, los objetos de registro y en especial controlando sus relaciones, entonces no será posible establecer una correcta correlación entre el origen de datos y el esquema de la ISO 2146:2010, y, por ende, tampoco se le podrá sacar el máximo partido (vocabulario estándar y controlado, identificadores únicos, abierto en número y tipo de datos, manejo de históricos, etc).</p>
               </ul>
-              <li class="four"><h3>Siguientes pasos</h3>
+              <li class="four"><h3>Tareas futuras</h3>
               <ul>
-                <li>Establecer una correlación entre los datos de ALZIRA/DIANA y el nuevo modelo de datos.  Para ello es necesario no solo clarificar los tipos de relaciones entre los objetos de registro, sino también controlarlas.  Hay un trabajo previo (perfiles) realizado sobre las relaciones entre <em>parties</em>, pero habría que realizar cargas de datos para visualizar el resultado.
-                <li>Establecer un buscador completo.
-                <li>Analizar y depurar los datos comunes y complementarios en ALZIRA/DIANA.  Hay trabajo previo de correlación de campos, pero habría que validarlo con el nuevo modelo de datos y enmarcarlo dentro de la interfaz de SERBER.
-                <li>Modificar ALZIRA para su interacción con SERBER.
-                <li>Crear el nuevo DIANA para su interacción con SERBER.
-                <li>Estrategia de Metadatos y Datos Enlazados…
+                <li><p>Establecer una correcta correlación entre los datos de ALZIRA/DIANA y el esquema de la ISO 2146:2010.  Para ello será necesario analizar cuidadosamente los datos de ALZIRA/DIANA, esto es, los objetos de registro y en especial controlando sus relaciones.  Existe un estudio previo realizado sobre <em>parties</em> y sus relaciones, pero habría que validarlo.</p>
+                <li><p>Depurar los datos comunes y complementarios en ALZIRA/DIANA.  Existe un estudio previo realizado sobre la correlación de campos, pero habría que validarlo e integrarlo en la interfaz de SERBER.</p>
+                <li><p>Implementar un sistema completo de búsqueda.</p>
+                <li><p>Modificar la antigua versión de ALZIRA para su interacción con SERBER.</p>
+                <li><p>Crear una nueva versión de DIANA para su interacción con SERBER.</p>
+                <li><p>Clarificar la estrategia de metadatos y datos enlazados…</p>
               </ul>
             </ol>
           </div>

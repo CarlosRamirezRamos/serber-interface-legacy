@@ -1,15 +1,16 @@
 @(title: String, menu: String)
 
-@serber("Servicios Web", "API de Servicios Web RESTful que permita el intercambio de información con el origen de datos y con terceros.", title) {
+@serber("Servicios Web", "Lógicas de registro que permiten la administración, consulta y modificación web de los datos de registro desde el protocolo HTTP.", title) {
           <div class="block">
             <ol class="round">
-              <li class="one"><p>Los servicios web admitirán diferentes formatos: JSON y XML.
+              <li class="one"><p>Los servicios web son <em>RESTful</em>, es decir, ligeros y estándares.  Unos servicios web <em>RESTful</em> permiten que las lógicas de negocio ocurran sobre el protocolo HTTP de forma óptima.</p>
+              <li class="two"><p>Los servicios web <em>RESTful</em> suelen intercambiar información utilizando los siguientes formatos:
               <ul>
-                <li><mark>JSON:</mark> Especialmente útil resulta para el uso por interfaz web y su consumo desde clientes web, es muy utilizado incluso para bases de datos no relacionales como MongoDB.  En este caso se utilizará para intercambiar datos con el modelo de datos.
-                <li><mark>XML:</mark> Especialmente útil resulta para el intercambio entre máquinas o aplicaciones.  En este caso se utilizará para el esquema de la ISO.
+                <li><p>XML: Este formato resulta especialmente útil para el intercambio de información genérica (documentos) entre dispositivos físicos o lógicos.  Se trata de un formato muy extensible y versátil.  En este caso, éste se utilizará para documentar el esquema de la ISO 2146:2010.</p>
+                <li><p>JSON: Este formato resulta especialmente útil para el intercambio de información específica (datos) entre la interfaz web y el servidor web. Se trata de un formato muy seguro e inteligible.  En este caso, éste se utilizará para el intercambio información con el modelo de datos.</p>
               </ul>
-              <li class="two"><p>Los servicios web RESTful son ligeros y estándares, además permiten la obtención de datos vía HTTP con un tráfico mínimo.</p>
-              <li class="three"><p>API de servicios web RESTful:
+              <li class="three"><p>Un API de servicios web <em>RESTful</em> permite el intercambio de información tanto con el origen de datos (datos de registro), como con terceros (presentaciones de registro).
+              <p>API de servicios web <em>RESTful</em>:
               <ul>
                 <li>(GET)&nbsp;/api/registry-object
                 <li>(POST)&nbsp;/api/registry-object/:id
