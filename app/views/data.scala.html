@@ -6,23 +6,17 @@
               <table class="search">
                 <thead>
                   <tr>
-                    <th>Búsqueda</th>
-                  </tr>
-                </thead>
+                    <th>Búsqueda
                 <tbody>
                   <tr>
-                    <td><label for="naming">Denominación (Name Part):</label><input name="naming" data-bind="value: search" /></td>
-                  </tr>
-                </tbody>
+                    <td><label for="naming">Denominación (Name Part):</label><input name="naming" data-bind="value: search">
                 <tfoot>
                   <tr>
-                    <td><button data-bind="click: searchButton">Buscar</button></td>
-                  </tr>
-                </tfoot>
+                    <td><button data-bind="click: searchButton">Buscar</button>
               </table>
               <ul data-bind="template: { name: 'response-tmpl', foreach: response }"></ul>
               <script type="text/html" id="response-tmpl">
-                <li><a href="javascript:void(0);" data-bind="text: complexNames[0].nameParts[0].value, click: $root.showRegistryObject, title: complexNames[0].nameParts[0].value, clickBubble: false"></a></li>
+                <li><a href="javascript:void(0);" data-bind="text: complexNames[0].nameParts[0].value, click: $root.showRegistryObject, title: complexNames[0].nameParts[0].value, clickBubble: false"></a>
               </script>
             </div>
             <div style="display: none;" data-bind="visible: isBackToSearchButtonVisible">
@@ -206,7 +200,6 @@
               </div>
             </div>
           </div>
-
           <script type="text/javascript">
             var menuVm = "@menu";
             var keyVm = "@key";
