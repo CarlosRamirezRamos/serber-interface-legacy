@@ -35,7 +35,6 @@ MenuVm._init = function () {
   }
 };
 
-$(document).ready(
-    function () {
-      MenuVm._init();
-    });
+$(document).ready(function () {
+  MenuVm._init();
+});

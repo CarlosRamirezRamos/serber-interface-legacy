@@ -2,29 +2,29 @@
 
 @pilot("Datos", "Búsqueda y consulta de objetos de registro en la base de datos del proyecto piloto.", title) {
           <div id="data-pane">
-            <div style="display: none;" data-bind="visible: isSearchButtonVisible">
+            <div data-bind="visible: isSearchButtonVisible" style="display: none;">
               <table class="search">
                 <thead>
                   <tr>
                     <th>Sistema de Búsqueda
                 <tbody>
                   <tr>
-                    <td><label for="naming">Denominación (Name Part):</label><input name="naming" data-bind="value: search">
+                    <td><label for="naming">Denominación (Name Part):</label><input data-bind="value: search" name="naming">
                 <tfoot>
                   <tr>
                     <td><button data-bind="click: searchButton">Buscar</button>
               </table>
               <ul data-bind="template: { name: 'response-tmpl', foreach: response }"></ul>
-              <script type="text/html" id="response-tmpl">
-                <li><a href="javascript:void(0);" data-bind="text: complexNames[0].nameParts[0].value, click: $root.showRegistryObject, title: complexNames[0].nameParts[0].value, clickBubble: false"></a>
+              <script id="response-tmpl" type="text/html">
+                <li><a data-bind="text: complexNames[0].nameParts[0].value, click: $root.showRegistryObject, title: complexNames[0].nameParts[0].value, clickBubble: false" href="javascript:void(0);"></a>
               </script>
             </div>
-            <div style="display: none;" data-bind="visible: isBackToSearchButtonVisible">
+            <div data-bind="visible: isBackToSearchButtonVisible" style="display: none;">
               <div class="block">
                 <button data-bind="click: backToSearchButton">Volver al Sistema de Búsqueda</button>
               </div>
             </div>
-            <div class="entity registryobject" style="display: none;" data-bind="visible: isRegistryObjectVisible">
+            <div class="entity registryobject" data-bind="visible: isRegistryObjectVisible" style="display: none;">
               <label class="name">Registry Object</label>
               <div class="item">
                 <div class="block">
@@ -50,7 +50,7 @@
                 <div class="block entity identifier" data-bind="visible: isIdentifiersVisible">
                   <label class="name">Identifiers</label>
                   <div class="list" data-bind="template: { name: 'identifiers-tmpl', foreach: identifiers }"></div>
-                  <script type="text/html" id="identifiers-tmpl">
+                  <script id="identifiers-tmpl" type="text/html">
                     <div class="item">
                       <div class="block">
                         <label class="field">identifier_id</label>
@@ -66,7 +66,7 @@
                 <div class="block entity description" data-bind="visible: isDescriptionsVisible">
                   <label class="name">Descriptions</label>
                   <div class="list" data-bind="template: { name: 'descriptions-tmpl', foreach: descriptions }"></div>
-                  <script type="text/html" id="descriptions-tmpl">
+                  <script id="descriptions-tmpl" type="text/html">
                     <div class="item">
                       <div class="block">
                         <label class="field">description_id</label>
@@ -82,7 +82,7 @@
                 <div class="block entity complexname" data-bind="visible: isComplexNamesVisible">
                   <label class="name">Complex Names</label>
                   <div class="list" data-bind="template: { name: 'complexnames-tmpl', foreach: complexNames }"></div>
-                  <script type="text/html" id="complexnames-tmpl">
+                  <script id="complexnames-tmpl" type="text/html">
                     <div class="item">
                       <div class="block">
                         <label class="field">complex_name_id</label>
@@ -97,7 +97,7 @@
                       </div>
                     </div>
                   </script>
-                  <script type="text/html" id="nameparts-tmpl">
+                  <script id="nameparts-tmpl" type="text/html">
                     <div class="item">
                       <div class="block">
                         <label class="field">name_part_id</label>
@@ -113,7 +113,7 @@
                 <div class="block entity location" data-bind="visible: isLocationsVisible">
                   <label class="name">Locations</label>
                   <div class="list" data-bind="template: { name: 'locations-tmpl', foreach: locations }"></div>
-                  <script type="text/html" id="locations-tmpl">
+                  <script id="locations-tmpl" type="text/html">
                     <div class="item">
                       <div class="block">
                         <label class="field">location_id</label>
@@ -124,7 +124,7 @@
                       </div>
                     </div>
                   </script>
-                  <script type="text/html" id="addresslocations-tmpl">
+                  <script id="addresslocations-tmpl" type="text/html">
                     <div class="item">
                       <div class="block">
                         <label class="field">address_location_id</label>
@@ -138,7 +138,7 @@
                       </div>
                     </div>
                   </script>
-                  <script type="text/html" id="electronicaddresses-tmpl">
+                  <script id="electronicaddresses-tmpl" type="text/html">
                     <div class="item">
                       <div class="block">
                         <label class="field">electronic_address_id</label>
@@ -150,7 +150,7 @@
                       </div>
                     </div>
                   </script>
-                  <script type="text/html" id="physicaladdresses-tmpl">
+                  <script id="physicaladdresses-tmpl" type="text/html">
                     <div class="item">
                       <div class="block">
                         <label class="field">physical_address_id</label>
@@ -161,7 +161,7 @@
                       </div>
                     </div>
                   </script>
-                  <script type="text/html" id="addressparts-tmpl">
+                  <script id="addressparts-tmpl" type="text/html">
                     <div class="item">
                       <div class="block">
                         <label class="field">address_part_id</label>
@@ -177,18 +177,18 @@
                 <div class="block entity relation" data-bind="visible: isRelationsVisible">
                   <label class="name">Relations</label>
                   <div class="list" data-bind="template: { name: 'relations-tmpl', foreach: relations }"></div>
-                  <script type="text/html" id="relations-tmpl">
+                  <script id="relations-tmpl" type="text/html">
                     <div class="item">
                       <div class="block entity relationdescription">
                         <div class="list" data-bind="template: { name: 'relationdescriptions-tmpl', foreach: relationDescriptions }"></div>
                       </div>
                       <div class="block">
                         <label class="field"></label>
-                        <a class="value" href="javascript:void(0);" data-bind="click: $root.showRelatedRegistryObject, clickBubble: false">Related Object</a>
+                        <a class="value" data-bind="click: $root.showRelatedRegistryObject, clickBubble: false" href="javascript:void(0);">Related Object</a>
                       </div>
                     </div>
                   </script>
-                  <script type="text/html" id="relationdescriptions-tmpl">
+                  <script id="relationdescriptions-tmpl" type="text/html">
                     <div class="item">
                       <div class="block">
                         <label class="field" data-bind="text: type"></label>
