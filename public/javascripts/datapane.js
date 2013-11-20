@@ -258,7 +258,6 @@ DataPaneVm._init = function () {
   }
 };
 
-$(document).ready(
-    function () {
-      DataPaneVm._init();
-    });
+$(document).ready(function () {
+  DataPaneVm._init();
+});

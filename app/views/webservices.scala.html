@@ -1,22 +1,22 @@
 @(title: String, menu: String)
 
-@serber("Servicios Web", "Lógicas de registro que permiten la administración, consulta y modificación web de los datos de registro desde el protocolo HTTP.", title) {
+@serber("Servicios Web", "Lógica de registro que permite la administración web de datos de registro desde el protocolo HTTP.", title) {
           <div class="block">
             <ol class="round">
-              <li class="one"><p>Los servicios web son <em>RESTful</em>, es decir, ligeros y estándares.  Unos servicios web <em>RESTful</em> permiten que las lógicas de negocio ocurran sobre el protocolo HTTP de forma óptima.</p>
-              <li class="two"><p>Los servicios web <em>RESTful</em> suelen intercambiar información utilizando los siguientes formatos:
+              <li class="one"><p>La lógica de registro proporciona un mecanismo de administración que permite buscar, crear, obtener, actualizar y borrar datos de registro mediante unos servicios web.
+              <li class="two"><p>Los servicios web habilitan la posibilidad de intercambiar información con terceros (presentaciones de registro) y lo hacen utilizando alguno de los siguientes formatos:
               <ul>
-                <li><p>XML: Este formato resulta especialmente útil para el intercambio de información genérica (documentos) entre dispositivos físicos o lógicos.  Se trata de un formato muy extensible y versátil.  En este caso, éste se utilizará para documentar el esquema de la ISO 2146:2010.</p>
-                <li><p>JSON: Este formato resulta especialmente útil para el intercambio de información específica (datos) entre la interfaz web y el servidor web. Se trata de un formato muy seguro e inteligible.  En este caso, éste se utilizará para el intercambio información con el modelo de datos.</p>
+                <li><p>XML: Este formato resulta especialmente útil para el intercambio de información genérica (documentos) entre dispositivos físicos o lógicos.  Se trata de un formato muy extensible y versátil.  En este caso, éste se utilizará para documentar el esquema de la ISO 2146:2010.
+                <li><p>JSON: Este formato resulta especialmente útil para el intercambio de información específica (datos) entre la interfaz web y el servidor web. Se trata de un formato muy seguro e inteligible.  En este caso, éste se utilizará para el intercambio información con el modelo de datos.
               </ul>
-              <li class="three"><p>Un API de servicios web <em>RESTful</em> permite el intercambio de información tanto con el origen de datos (datos de registro), como con terceros (presentaciones de registro).
-              <p>API de servicios web <em>RESTful</em>:
+              <li class="three"><p>Los servicios web son <em>RESTful</em>, es decir, ligeros y estándares.  Unos servicios web <em>RESTful</em> permiten que la lógica de registro ocurra sobre el protocolo HTTP de forma óptima.
+              <p>API de servicios web <em>RESTful</em> para la lógica de registro:
               <ul>
-                <li>(GET)&nbsp;/api/registry-object
-                <li>(POST)&nbsp;/api/registry-object/:id
-                <li>(GET)&nbsp;/api/registry-object/:id
-                <li>(PUT)&nbsp;/api/registry-object
-                <li>(DELETE)&nbsp;/api/registry-object/:id
+                <li><code>(GET)&nbsp;/api/registry-object</code>
+                <li><code>(POST)&nbsp;/api/registry-object/:id</code>
+                <li><code>(GET)&nbsp;/api/registry-object/:id</code>
+                <li><code>(PUT)&nbsp;/api/registry-object</code>
+                <li><code>(DELETE)&nbsp;/api/registry-object/:id</code>
                 <li>…
               </ul>
             </ol>
