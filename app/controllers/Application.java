@@ -48,15 +48,15 @@ public class Application extends Controller {
         return ok(references.render("SERBER - References", "References"));
     }
 
-    public static Result data() {
-        return ok(data.render("pilot - Data", "Data", null));
+    public static Result registryData() {
+        return ok(registry.render("pilot - Registry Data", "RegistryData", null));
+    }
+
+    public static Result registryObject(Long key) {
+        return ok(registry.render("pilot - Registry Object", "RegistryObject", key));
     }
 
     public static Result notes() {
         return ok(notes.render("pilot - Notes", "Notes"));
-    }
-
-    public static Result registryObject(Long key) {
-        return ok(data.render("pilot - Registry Object", "RegistryObject", key));
     }
 }
