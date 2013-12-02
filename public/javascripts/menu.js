@@ -28,11 +28,14 @@ MenuVm._load = function () {
 };
 
 MenuVm._init = function () {
-  if (document.getElementById('menu')) {
-    // Activate Knockout on "menu" view model.
-    ko.applyBindings(MenuVm, document.getElementById('menu'));
-    MenuVm._load();
+  if (document.getElementById('sidemenu')) {
+    ko.applyBindings(MenuVm,document.getElementById('sidemenu'))
   }
+   if (document.getElementById('topmenu')) {
+    ko.applyBindings(MenuVm,document.getElementById('topmenu'))
+  }
+  // Activate Knockout on "menu" view model.
+  MenuVm._load();
 };
 
 $(document).ready(function () {

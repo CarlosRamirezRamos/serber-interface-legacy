@@ -1,0 +1,31 @@
+@(menu: String)
+
+          <!-- SERBER Project Menu -->
+          <div class="margin-bottom-30">
+            <div class="headline">
+              <h2>Proyecto SERBER</h2>
+            </div>
+            <ul>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/WebInterface' }" href="/web-interface">Interfaz Web</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/WebServices' }" href="/web-services">Servicios Web</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/DataModel' }" href="/data-model">Modelo de Datos</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/Metadata' }" href="/metadata">Metadatos</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/LinkedData' }" href="/linked-data">Datos Enlazados</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/FOSS' }" href="/foss"><em>Free &amp; Open Source Software</em></a>
+            </ul>
+          </div>
+          <!-- End SERBER Project Menu -->
+          <!-- pilot Project Menu -->
+          <div class="margin-bottom-30">
+            <div class="headline">
+              <h2>Proyecto piloto</h2>
+            </div>
+            <ul>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='pilot/RegistryData' }" href="/registry-data">Datos de Registro</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='pilot/Notes' }" href="/notes">Notas</a>
+              <li><a href="https://github.com/serber-project" target="_github">GitHub</a>
+            </ul>
+          </div>
+         <!-- End pilot Project Menu -->
+
+
