@@ -20,16 +20,16 @@ public class Application extends Controller {
         return ok(index.render("Welcome to SERBER|pilot - Home"));
     }
 
-    public static Result webInterface() {
-        return ok(webinterface.render("SERBER - Web Interface", "WebInterface"));
+    public static Result dataModel() {
+        return ok(datamodel.render("SERBER - Data Model", "DataModel"));
     }
 
     public static Result webServices() {
         return ok(webservices.render("SERBER - Web Services", "WebServices"));
     }
 
-    public static Result dataModel() {
-        return ok(datamodel.render("SERBER - Data Model", "DataModel"));
+    public static Result webInterface() {
+        return ok(webinterface.render("SERBER - Web Interface", "WebInterface"));
     }
 
     public static Result metadata() {
@@ -48,15 +48,15 @@ public class Application extends Controller {
         return ok(references.render("SERBER - References", "References"));
     }
 
+    public static Result notes() {
+        return ok(notes.render("pilot - Notes", "Notes"));
+    }
+
     public static Result registryData() {
         return ok(registry.render("pilot - Registry Data", "RegistryData", null));
     }
 
     public static Result registryObject(Long key) {
         return ok(registry.render("pilot - Registry Object", "RegistryObject", key));
-    }
-
-    public static Result notes() {
-        return ok(notes.render("pilot - Notes", "Notes"));
     }
 }

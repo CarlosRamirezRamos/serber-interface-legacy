@@ -4,16 +4,16 @@
 
 # Home page
 GET     /                         controllers.Application.index()
-GET     /web-interface            controllers.Application.webInterface()
-GET     /web-services             controllers.Application.webServices()
 GET     /data-model               controllers.Application.dataModel()
+GET     /web-services             controllers.Application.webServices()
+GET     /web-interface            controllers.Application.webInterface()
 GET     /metadata                 controllers.Application.metadata()
 GET     /linked-data              controllers.Application.linkedData()
 GET     /foss                     controllers.Application.foss()
 GET     /references               controllers.Application.references()
+GET     /notes                    controllers.Application.notes()
 GET     /registry-data            controllers.Application.registryData()
 GET     /registry-object/:id      controllers.Application.registryObject(id: Long)
-GET     /notes                    controllers.Application.notes()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file             controllers.Assets.at(path="/public", file)
