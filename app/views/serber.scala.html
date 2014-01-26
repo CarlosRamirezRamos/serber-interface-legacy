@@ -15,15 +15,15 @@
     <header>
       <div class="content-wrapper">
         <div class="logo-serber">
-          <a href="/" title="Servicio de Registro de Bibliotecas y Entidades Relacionadas"></a>
+          <a href="@routes.Application.index()" title="Servicio de Registro de Bibliotecas y Entidades Relacionadas"></a>
         </div>
       </div>
       <div class="content-wrapper">
         <div class="float-left logo-mecd">
-          <a href="/" title="Ministerio de Educación, Cultura y Deporte - Gobierno de España"></a>
+          <a href="@routes.Application.index()" title="Ministerio de Educación, Cultura y Deporte - Gobierno de España"></a>
         </div>
         <div class="float-left">
-          <p class="site-title"><a href="/">piloto</a>
+          <p class="site-title"><a href="@routes.Application.index()">piloto</a>
         </div>
       </div>
     </header>
@@ -39,17 +39,17 @@
       <section class="content-wrapper">
         <div class="main-leftcolumn-home">
           <ul id="menu">
-            <li data-bind="css: { selected: menu()=='SerberPilot' }"><a href="/" title="Home SERBER|piloto">Home</a>
+            <li data-bind="css: { selected: menu()=='SerberPilot' }"><a href="@routes.Application.index()" title="Home SERBER|piloto">Home</a>
             <li class="separator">&nbsp;
-            <li data-bind="css: { selected: menu()=='DataModel' }"><a href="/data-model" title="Modelo de Datos SERBER">Modelo de Datos</a>
-            <li data-bind="css: { selected: menu()=='WebServices' }"><a href="/web-services" title="Servicios Web SERBER">Servicios Web</a>
-            <li data-bind="css: { selected: menu()=='WebInterface' }"><a href="/web-interface" title="Interfaz Web SERBER">Interfaz Web</a>
-            <li data-bind="css: { selected: menu()=='Metadata' }"><a href="/metadata" title="Metadatos SERBER">Metadatos</a>
-            <li data-bind="css: { selected: menu()=='LinkedData' }"><a href="/linked-data" title="Datos Enlazados SERBER">Datos Enlazados</a>
-            <li data-bind="css: { selected: menu()=='FOSS' }"><a href="/foss" title="FOSS SERBER"><em>Free &amp; Open Source Software</em></a>
-            <li data-bind="css: { selected: menu()=='References' }"><a href="/references" title="Referencias SERBER">Referencias</a>
+            <li data-bind="css: { selected: menu()=='DataModel' }"><a href="@routes.Application.dataModel()" title="Modelo de Datos SERBER">Modelo de Datos</a>
+            <li data-bind="css: { selected: menu()=='WebServices' }"><a href="@routes.Application.webServices()" title="Servicios Web SERBER">Servicios Web</a>
+            <li data-bind="css: { selected: menu()=='WebInterface' }"><a href="@routes.Application.webInterface()" title="Interfaz Web SERBER">Interfaz Web</a>
+            <li data-bind="css: { selected: menu()=='Metadata' }"><a href="@routes.Application.metadata()" title="Metadatos SERBER">Metadatos</a>
+            <li data-bind="css: { selected: menu()=='LinkedData' }"><a href="@routes.Application.linkedData()" title="Datos Enlazados SERBER">Datos Enlazados</a>
+            <li data-bind="css: { selected: menu()=='FOSS' }"><a href="@routes.Application.foss()" title="FOSS SERBER"><em>Free &amp; Open Source Software</em></a>
+            <li data-bind="css: { selected: menu()=='References' }"><a href="@routes.Application.references()" title="Referencias SERBER">Referencias</a>
             <li class="separator">&nbsp;
-            <li><a href="/notes" title="Notas piloto">Notas</a>
+            <li><a href="@routes.Application.notes()" title="Notas piloto">Notas</a>
           </ul>
         </div>
         <div class="main-contentcolumn-home">
