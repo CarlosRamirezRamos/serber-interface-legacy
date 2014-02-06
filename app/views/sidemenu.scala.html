@@ -6,12 +6,12 @@
               <h2>Proyecto SERBER</h2>
             </div>
             <ul>
-              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/WebInterface' }" href="/web-interface">Interfaz Web</a>
-              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/WebServices' }" href="/web-services">Servicios Web</a>
-              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/DataModel' }" href="/data-model">Modelo de Datos</a>
-              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/Metadata' }" href="/metadata">Metadatos</a>
-              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/LinkedData' }" href="/linked-data">Datos Enlazados</a>
-              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/FOSS' }" href="/foss"><em>Free &amp; Open Source Software</em></a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/DataModel' }" href="@routes.Application.dataModel()">Modelo de Datos</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/WebServices' }" href="@routes.Application.webServices()">Servicios Web</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/WebInterface' }" href="@routes.Application.webInterface()">Interfaz Web</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/Metadata' }" href="@routes.Application.metadata()">Metadatos</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/LinkedData' }" href="@routes.Application.linkedData()">Datos Enlazados</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='serber/FOSS' }" href="@routes.Application.foss()"><em>Free &amp; Open Source Software</em></a>
             </ul>
           </div>
           <!-- End SERBER Project Menu -->
@@ -21,9 +21,9 @@
               <h2>Proyecto piloto</h2>
             </div>
             <ul>
-              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='pilot/RegistryData' }" href="/registry-data">Datos de Registro</a>
-              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='pilot/Notes' }" href="/notes">Notas</a>
-              <li><a href="https://github.com/serber-project" target="_github">GitHub</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='pilot/Notes' }" href="@routes.Application.notes()">Notas</a>
+              <li><a data-bind="css: { 'btn btn-xs btn-info': menu()=='pilot/RegistryData' }" href="@routes.Application.registryData()">Datos de Registro</a>
+              <li><a href="https://github.com/SGCB/serber-interface-legacy" target="_github">GitHub</a>
             </ul>
           </div>
          <!-- End pilot Project Menu -->
