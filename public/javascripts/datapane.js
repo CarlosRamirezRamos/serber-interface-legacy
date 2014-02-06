@@ -209,7 +209,7 @@ DataPaneVm.searchButton = function () {
       DataPaneVm.search('');
     }
     // Send an AJAX request.
-    SettingsVm.url = AUTHORITY + '/registry-objects?search=' + DataPaneVm.search() + '&page=' + DataPaneVm.page();
+    SettingsVm.url = AUTHORITY + '/registry-objects?text=' + DataPaneVm.search() + '&page=' + DataPaneVm.page();
     SettingsVm.success = OnWsSearchButtonSuccessVm;
     $.ajax(SettingsVm);
   }

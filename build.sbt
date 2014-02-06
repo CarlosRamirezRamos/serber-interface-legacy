@@ -3,9 +3,9 @@ name := "serber-interface"
 version := "0.2-SNAPSHOT"
 
 libraryDependencies ++= Seq(
-  javaJdbc,
-  javaEbean,
+  jdbc,
+  //anorm,
   cache
 )
 
-play.Project.playJavaSettings
+play.Project.playScalaSettings
