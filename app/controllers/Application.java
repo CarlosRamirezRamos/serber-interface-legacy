@@ -29,7 +29,7 @@ public class Application extends Controller {
     }
 
     public static Result webInterface() {
-        return ok(webinterface.render("SERBER - Web Interface", "serber/WebInterface")));
+        return ok(webinterface.render("SERBER - Web Interface", "serber/WebInterface"));
     }
 
     public static Result metadata() {
