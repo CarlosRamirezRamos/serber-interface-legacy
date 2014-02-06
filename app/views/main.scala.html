@@ -54,7 +54,7 @@
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="@routes.Application.index()">
               <img alt="Logo" id="logo-header" src="@routes.Assets.at("images/mcu-net-serber-logo.png")"><h3 class="pull-right">| piloto</h3>
             </a>
             <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
@@ -67,21 +67,21 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-responsive-collapse" id="topmenu">
             <ul class="nav navbar-nav navbar-right">
-              <li data-bind="css: { active: menu()=='index' }"><a href="/">Home</a>
+              <li data-bind="css: { active: menu()=='index' }"><a href="@routes.Application.index()">Home</a>
               <li class="dropdown" data-bind="css: { active: menu().indexOf('serber/')>-1 }"><a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover="dropdown" data-toggle="dropdown" href="#">Proyecto SERBER<i class="icon-angle-down"></i></a>
               <ul class="dropdown-menu">
-                <li data-bind="css: { active: menu()=='serber/WebInterface' }"><a href="/web-interface">Interfaz Web</a>
-                <li data-bind="css: { active: menu()=='serber/WebServices' }"><a href="/web-services">Servicios Web</a>
-                <li data-bind="css: { active: menu()=='serber/DataModel' }"><a href="/data-model">Modelo de Datos</a>
-                <li data-bind="css: { active: menu()=='serber/Metadata' }"><a href="/metadata">Metadatos</a>
-                <li data-bind="css: { active: menu()=='serber/LinkedData' }"><a href="/linked-data">Datos Enlazados</a>
-                <li data-bind="css: { active: menu()=='serber/FOSS' }"><a href="/foss"><em>Free &amp; Open Source Software</em></a>
+                <li data-bind="css: { active: menu()=='serber/DataModel' }"><a href="@routes.Application.dataModel()">Modelo de Datos</a>
+                <li data-bind="css: { active: menu()=='serber/WebServices' }"><a href="@routes.Application.webServices()">Servicios Web</a>
+                <li data-bind="css: { active: menu()=='serber/WebInterface' }"><a href="@routes.Application.webInterface()">Interfaz Web</a>
+                <li data-bind="css: { active: menu()=='serber/Metadata' }"><a href="@routes.Application.metadata()">Metadatos</a>
+                <li data-bind="css: { active: menu()=='serber/LinkedData' }"><a href="@routes.Application.linkedData()">Datos Enlazados</a>
+                <li data-bind="css: { active: menu()=='serber/FOSS' }"><a href="@routes.Application.foss()"><em>Free &amp; Open Source Software</em></a>
               </ul>
               <li class="dropdown" data-bind="css: { active: menu().indexOf('pilot/')>-1 }"><a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover="dropdown" data-toggle="dropdown" href="#">Proyecto piloto<i class="icon-angle-down"></i></a>
               <ul class="dropdown-menu">
-                <li data-bind="css: { active: menu()=='pilot/RegistryData' }"><a href="/registry-data">Datos de Registro</a>
-                <li data-bind="css: { active: menu()=='pilot/Notes' }"><a href="/notes">Notas</a>
-                <li><a href="https://github.com/serber-project" target="_github">GitHub</a>
+                <li data-bind="css: { active: menu()=='pilot/Notes' }"><a href="@routes.Application.notes()">Notas</a>
+                <li data-bind="css: { active: menu()=='pilot/RegistryData' }"><a href="@routes.Application.registryData()">Datos de Registro</a>
+                <li><a href="https://github.com/SGCB/serber-interface-legacy" target="_github">GitHub</a>
               </ul>
             </ul>
           </div><!-- /navbar-collapse -->
@@ -146,7 +146,7 @@
             <p class="copyright-space">Copyright 2013 Spanish Ministry of Education, Culture and Sport.  <a href="http://ec.europa.eu/idabc/servlets/Docbb6d.pdf?id=31979" target="_license">License</a>
           </div><!--/col-md-6-->
           <div class="col-md-6">
-            <a href="/">
+            <a href="@routes.Application.index()">
               <img alt="Logo" class="pull-right" id="logo-footer" src="@routes.Assets.at("images/mcu-net-serber-logo.png")">
             </a>
           </div><!--/col-md-6-->
