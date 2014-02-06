@@ -8,46 +8,42 @@ import views._
 object Application extends Controller {
 
   def index = Action {
-    Ok(html.index("Welcome to SERBER|pilot - Home"))
-  }
-
-  def webInterface = Action {
-    Ok(html.webinterface("SERBER - Web Interface", "WebInterface"))
-  }
-
-  def webServices = Action {
-    Ok(html.webservices("SERBER - Web Services", "WebServices"))
+    Ok(html.index("Welcome to SERBER|pilot - Home", "index"))
   }
 
   def dataModel = Action {
-    Ok(html.datamodel("SERBER - Data Model", "DataModel"))
+    Ok(html.datamodel("SERBER - Data Model", "serber/DataModel"))
+  }
+
+  def webServices = Action {
+    Ok(html.webservices("SERBER - Web Services", "serber/WebServices"))
+  }
+
+  def webInterface = Action {
+    Ok(html.webinterface("SERBER - Web Interface", "serber/WebInterface"))
   }
 
   def metadata = Action {
-    Ok(html.metadata("SERBER - Metadata", "Metadata"))
+    Ok(html.metadata("SERBER - Metadata", "serber/Metadata"))
   }
 
   def linkedData = Action {
-    Ok(html.linkeddata("SERBER - Linked Data", "LinkedData"))
+    Ok(html.linkeddata("SERBER - Linked Data", "serber/LinkedData"))
   }
 
   def foss = Action {
-    Ok(html.foss("SERBER - FOSS", "FOSS"))
-  }
-
-  def references = Action {
-    Ok(html.references("SERBER - References", "References"))
+    Ok(html.foss("SERBER - FOSS", "serber/FOSS"))
   }
 
   def notes = Action {
-    Ok(html.notes("pilot - Notes", "Notes"))
+    Ok(html.notes("pilot - Notes", "pilot/Notes"))
   }
 
   def registryData = Action {
-    Ok(html.registry("pilot - Registry Data", "RegistryData", None))
+    Ok(html.registry("pilot - Registry Data", "pilot/RegistryData", None))
   }
 
   def registryObject(key: Long) = Action {
-    Ok(html.registry("pilot - Registry Object", "RegistryObject", Some(key)))
+    Ok(html.registry("pilot - Registry Object", "pilot/RegistryObject", Some(key)))
   }
 }
