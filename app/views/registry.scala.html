@@ -25,7 +25,7 @@
             <p>Búsqueda y obtención de datos de registro en la base de datos del proyecto piloto.
           </blockquote>
           <!-- inner content -->
-          <div id="data-pane">
+          <div id="registry">
             <!-- Search Block -->
             <div class="row servive-block servive-block-in margin-bottom-20" data-bind="visible: isSearchButtonVisible" style="display: none;">
               <div class="col-md-6">
@@ -45,9 +45,9 @@
               <div class="col-md-12">
                 <!-- List Block -->
                 <div data-bind="visible: isSearchButtonVisible" style="display: none;">
-                  <ul data-bind="template: { name: 'response-tmpl', foreach: response }"></ul>
+                  <ul data-bind="template: { name: 'registryObjects-tmpl', foreach: registryObjects }"></ul>
                   <!-- List Template -->
-                  <script id="response-tmpl" type="text/html">
+                  <script id="registryObjects-tmpl" type="text/html">
                     <li><a data-bind="text: complexNames[0].nameParts[0].value, click: $root.showRegistryObject, title: complexNames[0].nameParts[0].value, clickBubble: false" href="javascript:void(0);"></a>
                   </script>
                   <!-- End List Template -->
@@ -67,21 +67,21 @@
                   </div>
                   <dl class="dl-horizontal">
                     <dt>registry_object_key
-                    <dd><span data-bind="text: registry_object_key"></span>
+                    <dd><span data-bind="text: registryObject().registry_object_key"></span>
                     <dt>registry_object_class
-                    <dd><span data-bind="text: registry_object_class"></span>
+                    <dd><span data-bind="text: registryObject().registry_object_class"></span>
                     <dt>type
-                    <dd><span data-bind="text: type"></span>
+                    <dd><span data-bind="text: registryObject().type"></span>
                     <dt>originating_source
-                    <dd><span data-bind="text: originating_source"></span>
+                    <dd><span data-bind="text: registryObject().originating_source"></span>
                     <dt>originating_source_type
-                    <dd><span data-bind="text: originating_source_type"></span>
+                    <dd><span data-bind="text: registryObject().originating_source_type"></span>
                   </dl>
                   <div class="block entity identifier" data-bind="visible: isIdentifiersVisible">
                     <div class="headline">
                       <h2>Identifiers</h2>
                     </div>
-                    <div class="list" data-bind="template: { name: 'identifiers-tmpl', foreach: identifiers }"></div>
+                    <div class="list" data-bind="template: { name: 'identifiers-tmpl', foreach: registryObject().identifiers }"></div>
                     <!-- Identifiers Template -->
                     <script id="identifiers-tmpl" type="text/html">
                       <dl class="dl-horizontal">
@@ -97,7 +97,7 @@
                     <div class="headline">
                       <h2>Descriptions</h2>
                     </div>
-                    <div class="list" data-bind="template: { name: 'descriptions-tmpl', foreach: descriptions }"></div>
+                    <div class="list" data-bind="template: { name: 'descriptions-tmpl', foreach: registryObject().descriptions }"></div>
                     <!-- Descriptions Template -->
                     <script id="descriptions-tmpl" type="text/html">
                       <dl class="dl-horizontal">
@@ -113,7 +113,7 @@
                     <div class="headline">
                       <h2>Complex Names</h2>
                     </div>
-                    <div class="list" data-bind="template: { name: 'complexnames-tmpl', foreach: complexNames }"></div>
+                    <div class="list" data-bind="template: { name: 'complexnames-tmpl', foreach: registryObject().complexNames }"></div>
                     <!-- ComplexNames Template -->
                     <script id="complexnames-tmpl" type="text/html">
                       <dl class="dl-horizontal">
@@ -122,7 +122,7 @@
                         <dt><span data-bind="text: type"></span>
                         <dd><span data-bind="text: value"></span></dd>
                         <br>
-                        <div data-bind="template: { name: 'nameparts-tmpl', foreach: nameParts }"></div>
+                        <div data-bind="template: { name: 'nameparts-tmpl', foreach: registryObject().nameParts }"></div>
                       </dl>
                     </script>
                     <!-- End ComplexNames Template -->
@@ -141,7 +141,7 @@
                     <div class="headline">
                       <h2>Locations</h2>
                     </div>
-                    <div class="list" data-bind="template: { name: 'locations-tmpl', foreach: locations }"></div>
+                    <div class="list" data-bind="template: { name: 'locations-tmpl', foreach: registryObject().locations }"></div>
                     <!-- Locations Template -->
                     <script id="locations-tmpl" type="text/html">
                       <dl class="dl-horizontal">
@@ -198,7 +198,7 @@
                     <div class="headline">
                       <h2>Relations</h2>
                     </div>
-                    <div class="list" data-bind="template: { name: 'relations-tmpl', foreach: relations }"></div>
+                    <div class="list" data-bind="template: { name: 'relations-tmpl', foreach: registryObject().relations }"></div>
                     <!-- Relations Template -->
                     <script id="relations-tmpl" type="text/html">
                       <dl class="dl-horizontal">
